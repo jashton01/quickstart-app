@@ -5,7 +5,7 @@ const apiBaseUrl = process.env.API_BASE_URL;
 const authToken =
   process.env.WORKFLOW_TOKEN + ":" + process.env.WORKFLOW_SECRET;
 const journeyToken = process.env.JOURNEY_TOKEN!;
-
+console.log("your token is"+journeyToken)
 const postRequest = async (journeyToken: string, data: string) => {
   const apiUrl = apiBaseUrl + "journeys/" + journeyToken + "/applications";
   const response = await fetch(apiUrl, {
